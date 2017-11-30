@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Banana Republic</title>
+
+<!-- Stylesheets //-->
+<link rel="stylesheet" href="css/screen.css" type="text/css">
+<link rel="stylesheet" href="css/custom.css" type="text/css">
+
+<!-- Scripts //-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/index.js"></script>
+</head>
+
+<body>
+   	<!-- Container //-->
+    <section class="container">
+       	<!-- Yellow Box //-->
+        <div class="box-yellow">
+           
+           <figure class="profile_picture"></figure>
+           
+           <h1>Front-end challenge!</h1>
+           
+           <p>This is a design that you will need to code up and impress us.</p>
+           
+           <!-- Desktop Slider //-->
+            <div id="desktop_click">
+            	<div class="desktop_swop">
+            		<a href="#" class="close"></a> 
+            	</div>           	
+            </div>
+            
+            <!-- Mobile Slider //-->
+            <div id='mobile_click'>
+            	<div class="mobile_swop">
+            		<a href="#" class="up"></a> 
+            	</div>              	
+            </div>
+        </div>
+		<!-- Yellow Box End //-->
+       
+       	<!-- White Box //-->
+        <div class="box-white">
+			<form class="cmxform" id="signupForm" method="get" action="">
+				<fieldset>
+					<div class="input_fields">
+						<label class="label_element" for="firstname">Name</label>
+						<input id="firstname" name="firstname" type="text">
+					</div>
+					<div class="input_fields">
+						<label class="label_element" for="gender">Gender</label>
+						<div class="radio_buttons r__male">					
+							<input id="gender" name="gender" type="radio"> <span>Male</span>
+							<div class="check"></div>
+						</div>
+						<div class="radio_buttons r__female">					
+							<input id="gender" name="gender" type="radio"> <span>Female</span>
+							<div class="check"></div>
+						</div>
+					</div>
+					<div class="input_fields date_of_birth">
+						<label class="label_element" for="dateofbirth">Date of Birth</label>
+						<input id="dateofbirth" name="dateofbirth" class="calendar" type="text">
+					</div>
+					<div class="input_fields">
+						<label class="label_element" for="email">Email</label>
+						<input id="email" name="email" type="email">
+					</div>
+					<div class="input_fields">
+						<label class="label_element" for="mobilenumber">Mobile</label>
+						<input id="mobilenumber" name="mobilenumber" type="telephone">
+					</div>
+					<div class="input_fields">
+						<label class="label_element" for="customerid">Customer ID</label>
+						<input id="customerid" name="customerid" type="text">
+					</div>
+					<div class="input_fields">
+
+						<label class="label_element" for="membership">Membership</label>
+						<div class="radio_buttons r__classic">
+							<input id="membership" name="membership" type="radio"> <span>Classic</span>
+							<div class="check"></div>
+						</div>
+						<div class="radio_buttons r__silver">				
+							<input id="membership" name="membership" type="radio"> <span>Silver</span>
+							<div class="check"></div>
+						</div>					
+						<div class="radio_buttons r__gold">				
+							<input id="membership" name="membership" type="radio"> <span>Gold</span>
+							<div class="check"></div>
+						</div>					
+					</div>
+					<div class="input_fields input_buttons">
+						<input class="cancel" type="button" value="Cancel" onclick="myFunction()">
+						<input class="save" type="submit" value="Save">
+					</div>
+				</fieldset>
+			</form>
+
+			<!-- Orange Box //-->
+			<div id="panel" class="box-orange">
+				<h1>My world today</h1>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#"><strong>View all days</strong/></a> eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat</p>
+			</div>
+			<!-- Orange Box End //-->
+
+        </div>
+        <!-- White Box End //-->       
+  
+    </section>
+    <!-- Container End  //-->
+</body>
+</html>

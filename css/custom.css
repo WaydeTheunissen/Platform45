@@ -1,0 +1,489 @@
+body { 
+	position: relative; 
+	height: 100%; 
+	max-height: 1000px;	
+	font-family: 'ArialMT';
+	color:#383838;
+}
+
+
+/* General */
+a { 
+	color: #383838;
+	text-decoration: underline;
+}
+a:hover, a:active, a:visited { 
+	color: #000;
+	text-decoration:underline;
+}
+h1 {	 
+	font-family: 'Arial-BoldMT';
+	font-size: 36px; 
+	font-weight: bold; 
+	text-align: center; 	
+}
+p {    
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    margin-left: 15%;	
+    margin-right: 15%;		
+}
+label { 
+	width: 120px; 
+	padding: 0 20px; 
+	height:12px; 
+	line-height: 12px; 
+	vertical-align: middle;
+}
+input[type=text],
+input[type=telephone],
+input[type=email]{ 
+	max-width: 380px;
+	width: 100%; 
+	height: 12px; 
+	line-height: 12px; 
+	padding: 20px; 
+	border-radius: 5px; 
+	background-color: #f5f8f9; 
+	border:1px solid transparent;
+}
+label, 
+input, 
+fieldset { 
+	font-size: 16px;
+}
+
+/* Custom Font Types */
+@font-face {
+  font-family: 'Arial-BoldMT';
+  src: 	url("../fonts/Arial-BoldMT.eot") format('embedded-opentype'),  
+	   	url("../fonts/Arial-BoldMT.otf") format('opentype'),
+		url("../fonts/Arial-BoldMT.woff") format('woff'), 
+	  	url("../fonts/Arial-BoldMT.ttf") format('truetype'), 
+	  	url("../fonts/Arial-BoldMT.svg#Arial-BoldMT") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArialMT';
+  src: 	url("../fonts/ArialMT.eot?#iefix") format('embedded-opentype'),  
+	  	url("../fonts/ArialMT.woff") format('woff'), 
+	  	url("../fonts/ArialMT.ttf") format('truetype'), 
+	  	url("../fonts/ArialMT.svg#ArialMT") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#panel { 
+	height: /*500px*/100%; 
+	width: /*200px*/100%; 
+	float: left; 
+	display: none;
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	max-width: 807.5px; 
+	max-height: 892px;
+	z-index: 5;
+}
+.desktop_swop a.close { 
+    height: 68px;
+    width: 68px;
+    float: left;
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+    background: url(../images/sprite.png) no-repeat -6px -809px;
+    display: block;	
+}
+.desktop_swop a.open { 
+    height: 68px;
+    width: 68px;
+    float: left;
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+    background: url(../images/sprite.png) no-repeat -86px -811px;
+    display: block;	
+}
+	
+.container { 
+	width: 100%; 
+	max-width: 1360px; 
+	height: 892px; 
+	max-height: 892px; 
+	overflow: hidden; 
+	margin: 30px auto; 
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(246,246,246,1);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(246,246,246,1);
+	box-shadow: 0px 0px 10px 2px rgba(246,246,246,1);
+	border-radius: 42.5px;	
+}
+.box-yellow { 
+	max-width: 40.5% /*552.5px*/; 
+	width: 100%; 
+	height: 892px; 
+	background-color: #ffd500; 
+	float: left; 
+	position: relative;	
+	border-radius: 42.5px 0 0 42.5px;
+	text-align: center;
+}
+.box-yellow h1 {	
+    margin-top: 15%;
+}
+.box-yellow p {
+	margin-left: 20%;
+	margin-right: 20%;		
+}
+.box-white { 
+    max-width: 55.5% /*807.5px*/;
+    width: 100%;
+    height: 892px;
+    background-color: #fff;
+    float: left;
+    border-radius: 0 42.5px 42.5px 0;
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.box-orange { 
+	background-color: #ff9200; 
+	border-radius: 0 42.5px 42.5px 0;
+}
+.box-orange h1 {
+    margin-top: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 0;
+	text-align: left;
+}
+.box-orange p {
+    margin-top: 2%;	
+	max-width: 577px;
+	text-align: left;	
+}	
+.bottomPanel { 
+	display: none; 
+}
+.profile_picture { 
+	background: url(../images/sprite.png) no-repeat -10px -548px; 
+	width:240px; 
+	height: 240px; 
+    display: inline-block;
+    margin-top: 30%;
+    text-align: center;
+}
+.input_fields { 
+    padding: 10px 0;
+    max-width: 582px;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0;
+	position: relative;
+	margin-top: 10px;
+}
+.input_fields.date_of_birth { 
+	position: relative;
+}
+.input_fields.date_of_birth .calendar { 
+background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+    background-position: right -251px;
+}
+.input_fields .cancel, 
+.input_fields .save { 
+	width: 160px; 
+	height: 52px; 
+	font-size: 16px; 
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	text-transform: uppercase;    
+	border: 0;
+    border-radius: 5px;
+    cursor: pointer; 
+	margin-right: 25px;
+}	
+.input_fields .cancel { 
+	background-color: #f5f8f9; 
+	color:#42484a;
+} 
+.input_fields .save	{ 
+	background-color: #60e6c5; 
+	color:#fff;
+} 
+.input_buttons { 
+	text-align: right;
+    margin-top: 75px;	
+}	
+.input_fields .radio_buttons {
+	float: left; 
+    max-width: 140px;
+}
+.input_fields span{
+    position: relative;
+    padding-left: 70px;
+    padding-top: 20px;
+    line-height: 52px;
+	color: #bac7d3;
+	font-size: 14px;
+	margin-right: 40px;	
+}
+.input_fields span:after{
+	content:'';
+	width:53px;
+	height:53px;
+	position:absolute;
+	left:0;
+	top:1px;
+	border-radius:100%;
+	-ms-border-radius:100%;
+	-moz-border-radius:100%;
+	-webkit-border-radius:100%;
+	box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.input_fields input[type="radio"]{
+	cursor: pointer; 
+	position:absolute;
+	width:100%;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+.input_fields input[type="radio"]:checked + span{
+	color:#b4c2cf; 
+	font-size:14px;
+}
+.input_fields input[type="radio"]:checked + span:before{
+	content:'';
+	width:53px;
+	height:53px;
+	position:absolute;
+	left:2px;
+	top:2px;
+	border-radius:100%;
+	-ms-border-radius:100%;
+	-moz-border-radius:100%;
+	-webkit-border-radius:100%;
+	z-index: 1;
+}
+
+.input_fields .r__female input[type="radio"]:checked + span:before { 
+	background: url(../images/sprite.png) no-repeat 5px -132px #b1bfcd;
+}
+.input_fields .r__male input[type="radio"]:checked + span:before { 
+	background: url(../images/sprite.png) no-repeat 5px -10px #b1bfcd;
+}
+.input_fields .r__classic input[type="radio"]:checked + span:before { 
+	background: url(../images/sprite.png) no-repeat 4px -312px #b1bfcd;
+}
+.input_fields .r__silver input[type="radio"]:checked + span:before { 
+	background: url(../images/sprite.png) no-repeat 4px -312px #b1bfcd;
+}
+.input_fields .r__gold input[type="radio"]:checked + span:before { 
+	background: url(../images/sprite.png) no-repeat 4px -312px #b1bfcd;
+}	
+
+.input_fields .r__female span:after { 
+	background: url(../images/sprite.png) no-repeat 5px -193px #f5f8f9;
+}
+.input_fields .r__male span:after { 
+	background: url(../images/sprite.png) no-repeat 5px -69px #f5f8f9;
+}
+.input_fields .r__classic span:after { 
+	background: url(../images/sprite.png) no-repeat 4px -373px #f5f8f9;
+} 
+.input_fields .r__silver span:after { 
+	background: url(../images/sprite.png) no-repeat 4px -373px #f5f8f9;
+}
+.input_fields .r__gold span:after { 
+	background: url(../images/sprite.png) no-repeat 4px -373px #f5f8f9;
+}		
+	
+
+/* ===========================================
+	
+				MEDIA QUERIES
+
+   =========================================== */
+
+/* --- max-width: 1070px --- */
+@media only screen and (max-width: 1070px) {
+	
+	p { 
+		font-size: 18px;
+	}	
+	input[type=text], 
+	input[type=telephone], 
+	input[type=email] {
+		clear: both;
+		margin-left: 20px; 
+		width: 85%!important;
+	}	
+	.box-yellow h1 {
+		font-size: 24px;
+	}
+	.box-yellow p {
+		margin-left: 14%;
+		margin-right: 14%;
+	}	
+	.input_fields {
+		width: 78%;
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 5px;
+	}	
+	form.cmxform label.error, label.error {    
+		right: 15px;
+	}	
+	.input_buttons {
+		text-align: center;
+		margin-top: 15px;
+		width: 100%;
+	}	
+	.r__male, .r__classic {
+		margin-left: 20px!important;
+	}
+	.r__gold {
+		right: -27px;
+		margin-top: 15px;
+		margin-left: 20px;
+	}
+	form.cmxform label {
+		width: 100%;
+		display: inline-table;
+	}	
+}
+
+/* --- max-width: 767px --- */
+@media only screen and (max-width: 767px) {
+	
+	input[type=text], 
+	input[type=telephone], 
+	input[type=email] {
+		clear: both;
+		margin-left: 0;
+		width: 85%;
+		max-width: 85%;
+    	/*padding: 20px 0;*/		
+	}	
+	form.cmxform {		
+		width: auto;
+		margin: 60px 0 0 0;
+		max-width: 100%;
+	}	
+	form.cmxform label {
+		width: 100%;
+		float: left;
+		clear: both;
+		vertical-align: initial;
+		line-height: 0;
+		padding-left: 0;
+    	padding-right: 0;
+	}
+	form.cmxform label.error, label.error {
+		position: absolute;
+		right: 70px;
+		bottom: -15px;
+	}	
+	#panel {
+		max-height: 100%;
+	}
+	.container {
+    	width: 100%;
+    	max-width: 100%;
+    	height: 100%;
+    	max-height: 100%;
+	    border-radius: 0;
+    	box-shadow: none;
+    	margin: 0 auto;
+	}
+	.box-yellow {
+    	max-width: 100%;
+    	border-radius: 0;		
+	}
+	.box-white {
+		max-width: 100%;
+		width: 96%;
+		height: auto;
+		background-color: #fff;
+		float: left;
+		border-radius: 0;
+		position: relative;
+	}	
+	.box-orange { 
+		display: none;
+		border-radius: 0;
+	}	
+	.input_fields {
+		padding: 10px 20px;
+		max-width: 100%;
+		width: 93%;
+		max-width: 100%;
+		margin: 5px 0;
+	}
+	.input_fields .radio_buttons {
+		margin-left: 0!important;
+		margin-right: 20px;
+		margin-top: 10px;
+		margin-bottom: 10px;		
+	}
+	.input_buttons {
+		text-align: center;
+	}
+	#desktop_click	{
+		display: none;		
+	}
+	.mobile_swop a.up { 
+		height: 68px;
+		width: 68px;
+		float: left;
+		position: absolute;
+		bottom: 60px;
+		left: 40%;
+		background: url(../images/sprite.png) no-repeat -6px -886px;
+		display: block;	
+	}
+	.mobile_swop a.down { 
+		height: 68px;
+		width: 68px;
+		float: left;
+		position: absolute;
+		bottom: 60px;
+		left: 40%;
+		background: url(../images/sprite.png) no-repeat -86px  -886px;
+		display: block;	
+	}	
+	form.cmxform .error_wrapper .label_element {
+		padding: 10px 0 0 20px;
+	}
+}
+
+/* --- max-width: 460px --- */
+@media only screen and (max-width: 460px) {
+
+	input[type=text], 
+	input[type=telephone], 
+	input[type=email] {
+		clear: both;
+		margin-left: 0;
+		width: 80%;
+		max-width: 80%;
+	}	
+	.input_buttons {
+		text-align: center;
+	}	
+	.input_buttons input {
+		width: 100%!important;
+		clear: both;
+		margin: 10px 0;
+	}
+}
